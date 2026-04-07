@@ -1,8 +1,12 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        m = {}
-        for i, j in enumerate(nums):
-            res = target - j
-            if res in m:
-                return [m[res], i]
-            m[j] = i
+       n=len(nums)
+       h={}
+       l=[]
+       for i in range(n):
+        rem=target-nums[i]
+        if rem in h:
+            l.append (h[rem])
+            l.append (i)
+            return l
+        h[nums[i]]=i
