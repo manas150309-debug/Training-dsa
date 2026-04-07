@@ -7,14 +7,17 @@ class Solution:
         #     if i not in nums:
         #         c=i
         # return c
-        h={}
-        for i in range(len(nums)+1):
-            h[i]=0
-        for j in nums:
-            h[j]=1
+        # h={}
+        # for i in range(len(nums)+1):
+        #     h[i]=0
+        # for j in nums:
+        #     h[j]=1
             
-        for k,v in h.items():
-            if v==0:
-                return k
+        # for k,v in h.items():
+        #     if v==0:
+        #         return k
 
-        
+        n=len(nums)
+        expected_sum=n*(n+1)//2
+        actual=sum(nums)
+        return expected_sum-actual
